@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>[AW] Battle Calculator</title>
+    <link rel="stylesheet" type="text/css" href="htmlStyle.css">
+</head>
+
+<body>
+
+<div class="StackGroup">
+    <table width="1088" border="1">
+        <thead>
+        <tr>
+            <th height="45" colspan="8" scope="row">atWar Battle Calculator Online [TEST] V1.0</th>
+        </tr>
+        </thead>
+
+
+        <tbody>
+        <tr>
+            <!--Define each stack column-->
+
+            <!--Stack 1-->
+            <td width="250" rowspan="2">
+                <div class="stackContainer">
+                    <table class="stackTable">
+
+                        <thead>
+                        <tr>
+                            <th colspan="2">Stack 1</th>
+                        </tr>
+                        </thead>
+
+
+
+                        <tbody id="stack1Attributes">
+                        <tr>
+                            <td>Status</td>
+                            <td>
+                                <select onchange="changeStatus('stack1')">
+                                    <option value="0">Disable</option>
+                                    <option value="1" selected>Attack</option>
+                                    <option value="2">Defense</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>Attack</td>
+                            <td><input type="number" value="4" min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Defense</td>
+                            <td><input type="number" value="6" min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>HP</td>
+                            <td><input type="number" value="7" min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Critical (%)</p></td>
+                            <td><input type="number" value="5" min="0" max="100" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td><input type="number" value="5" min="1" max="10000" maxlength="5"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="add" onclick="addUnit('stack1')"></td>
+                            <td><input type="button" value="clear" onclick="clearStack('stack1')"> </td>
+
+                        </tr>
+                        <tr>&nbsp;</tr>
+                        <tr>
+
+                            <td colspan="2">
+
+                                <div class="troopsContainer">
+                                    <table class="troopsTable">
+                                        <thead>
+                                        <tr>
+                                        <tr>
+                                            <th>Att</th>
+                                            <th>Def</th>
+                                            <th>HP</th>
+                                            <th>Crit</th>
+                                            <th>#</th>
+                                        </tr>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody id="stack1Troops">
+                                        <tr>
+                                            <td>4</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+
+            <!--Stack 2-->
+            <td width="250" rowspan="2">
+                <div class="stackContainer">
+                    <table class="stackTable">
+                        <thead>
+                        <tr>
+                            <th colspan="2">Stack 2</th>
+                        </tr>
+                        </thead>
+
+                        <tbody id="stack2Attributes">
+                        <tr>
+                            <td>Status</td>
+                            <td>
+                                <select onchange="changeStatus('stack2')">
+                                    <option value="0">Disable</option>
+                                    <option value="1">Attack</option>
+                                    <option value="2" selected>Defense</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>Attack</td>
+                            <td><input type="number" value="4" min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Defense</td>
+                            <td><input type="number" value="6" min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>HP</td>
+                            <td><input type="number" value="7" min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Critical (%)</p></td>
+                            <td><input type="number" value="5" min="0" max="100" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td><input type="number" value="5" min="1" max="10000" maxlength="5"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="add" onclick="addUnit('stack2')"></td>
+                            <td><input type="button" value="clear" onclick="clearStack('stack2')"></td>
+                        </tr>
+                        <tr>&nbsp;</tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="troopsContainer">
+                                    <table class="troopsTable" >
+                                        <thead>
+                                        <tr>
+                                        <tr>
+                                            <th>Att</th>
+                                            <th>Def</th>
+                                            <th>HP</th>
+                                            <th>Crit</th>
+                                            <th>#</th>
+                                        </tr>
+                                        </tr>
+                                        </thead>
+
+
+                                        <tbody id="stack2Troops">
+                                        <tr>
+                                            <td>4</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+
+            <!--Stack 3-->
+            <td width="250" rowspan="2">
+                <div class="stackContainer">
+                    <table class="stackTable">
+                        <thead>
+                        <tr>
+                            <th colspan="2">Stack 3</th>
+                        </tr>
+                        </thead>
+
+                        <tbody id="stack3Attributes">
+                        <tr>
+                            <td>Status</td>
+                            <td>
+                                <select onchange="changeStatus('stack3')">
+                                    <option value="0" selected>Disable</option>
+                                    <option value="1">Attack</option>
+                                    <option value="2">Defense</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>Attack</td>
+                            <td><input type="number" disabled min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Defense</td>
+                            <td><input type="number" disabled min="1" max="150" maxlength="3" ></td>
+                        </tr>
+                        <tr>
+                            <td>HP</td>
+                            <td><input type="number" disabled min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Critical (%)</p></td>
+                            <td><input type="number" disabled min="0" max="100" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td><input type="number" disabled min="1" max="10000" maxlength="5"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" disabled value="add" onclick="addUnit('stack3')" ></td>
+                            <td><input type="button" disabled value="clear" onclick="clearStack('stack3')"></td>
+                        </tr>
+                        <tr>&nbsp;</tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="troopsContainer">
+                                    <table class="troopsTable">
+                                        <thead>
+                                        <tr>
+                                        <tr>
+                                            <th>Att</th>
+                                            <th>Def</th>
+                                            <th>HP</th>
+                                            <th>Crit</th>
+                                            <th>#</th>
+                                        </tr>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody id="stack3Troops">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+
+            <!--Stack 4-->
+            <td width="250" rowspan="2">
+                <div class="stackContainer">
+                    <table class="stackTable">
+                        <thead>
+                        <tr>
+                            <th colspan="2">Stack 4</th>
+                        </tr>
+                        </thead>
+                        <tbody id="stack4Attributes">
+                        <tr>
+                            <td>Status</td>
+                            <td>
+                                <select onchange="changeStatus('stack4')">
+                                    <option value="0" selected>Disable</option>
+                                    <option value="1">Attack</option>
+                                    <option value="2">Defense</option>
+                                </select></td>
+                        </tr>
+
+                        <tr>
+                            <td>Attack</td>
+                            <td><input type="number" disabled min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Defense</td>
+                            <td><input type="number" disabled min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>HP</td>
+                            <td><input type="number" disabled min="1" max="150" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td><p>Critical (%)</p></td>
+                            <td><input type="number" disabled min="0" max="100" maxlength="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td><input type="number" disabled min="1" max="10000" maxlength="5"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" disabled value="add" onclick="addUnit('stack4')"></td>
+                            <td><input type="button" disabled value="clear" onclick="clearStack('stack4')"></td>
+                        </tr>
+                        <tr>&nbsp;</tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="troopsContainer">
+                                    <table class="troopsTable">
+                                        <thead>
+                                        <tr>
+                                        <tr>
+                                            <th>Att</th>
+                                            <th>Def</th>
+                                            <th>HP</th>
+                                            <th>Crit</th>
+                                            <th>#</th>
+                                        </tr>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="stack4Troops">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+
+            <!--End of Stack codes. Defines the last column for submit & result -->
+
+            <td width="132" height="28"><input type="button" value="Submit" onClick="getResult()"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;
+                <div id="result"></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="action.js"></script>
+
+</body>
+</html>
